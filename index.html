@@ -186,13 +186,12 @@
   </footer>
 
   <!-- Audio -->
-<audio id="bgMusic" autoplay loop muted>
-  <source src="https://n.uguu.se/sXXTBJwG.mp3" type="audio/mpeg">
-</audio>
-
-<div style="position:fixed;bottom:20px;right:20px;">
-  <button onclick="toggleMusic()" class="btn"><i class="fa-solid fa-music"></i> Musik</button>
-</div>
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://n.uguu.se/sXXTBJwG.mp3" type="audio/mpeg">
+  </audio>
+  <div style="position:fixed;bottom:20px;right:20px;">
+    <button onclick="toggleMusic()" class="btn"><i class="fa-solid fa-music"></i> Musik</button>
+  </div>
 
   <script>
     let music = document.getElementById("bgMusic");
