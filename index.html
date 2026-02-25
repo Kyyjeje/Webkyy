@@ -198,7 +198,61 @@
     function toggleMusic(){
       if(music.paused){music.play();}else{music.pause();}
     }
+  </body>
+<!-- Iklan Bar -->
+<div id="adsBar" class="ads-bar">
+  <span>🔥 Promo Spesial! Lihat penawaran terbaru kami!</span>
+  <button onclick="closeAds()">✕</button>
+</div>
 
+<style>
+/* Gaya iklan bar */
+.ads-bar {
+  position: fixed;
+  bottom: -150px;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: bottom .5s ease;
+  z-index: 9999;
+}
+
+.ads-bar button {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+}
+</style>
+
+<script>
+// Tampilkan setelah 3 detik
+setTimeout(() => {
+  document.getElementById("adsBar").style.bottom = "0";
+}, 3000);
+
+// Auto close setelah 10 detik tambahan
+setTimeout(() => {
+  closeAds();
+}, 13000);
+
+function closeAds() {
+  const bar = document.getElementById("adsBar");
+  bar.style.bottom = "-150px";
+}
+</script>
+    
     // Animasi scroll produk
     const cards = document.querySelectorAll(".card");
     const observer = new IntersectionObserver(entries => {
