@@ -45,27 +45,6 @@
         <source src="musik.mp3" type="audio/mpeg">
         Browser kamu tidak mendukung audio.
     </audio>
-
-    <!-- Tombol play/pause -->
-    <button id="playBtn">▶️ Putar Musik</button>
-
-    <script>
-        const audio = document.getElementById("myAudio");
-        const btn = document.getElementById("playBtn");
-
-        let isPlaying = false;
-
-        btn.addEventListener("click", () => {
-            if (!isPlaying) {
-                audio.play();
-                btn.textContent = "⏸️ Jeda Musik";
-            } else {
-                audio.pause();
-                btn.textContent = "▶️ Putar Musik";
-            }
-            isPlaying = !isPlaying;
-        });
-
     <div class="card">
         <h1>🎉 Selamat Ulang Tahun 🎂</h1>
         <p>Semoga panjang umur, sehat selalu,</p>
