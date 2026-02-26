@@ -78,7 +78,15 @@
             ▶️ Putar Musik
         </button>
     </div>
+<!-- copyright -->
+    <footer>
+    © <span id="year"></span> Kyyjeje. All Rights Reserved.
+</footer>
 
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+    
     <script>
         const music = document.getElementById("bgMusic");
         const btn = document.getElementById("musicBtn");
