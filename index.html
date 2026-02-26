@@ -7,7 +7,11 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+
+            /* GANTI FOTO DI SINI */
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+
             font-family: Arial, sans-serif;
             text-align: center;
             color: white;
@@ -15,11 +19,11 @@
 
         .card {
             margin-top: 100px;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.6);
             padding: 40px;
             border-radius: 20px;
             display: inline-block;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
             animation: fadeIn 3s ease-in-out;
         }
 
@@ -32,6 +36,23 @@
             font-size: 20px;
         }
 
+        .music-btn {
+            margin-top: 25px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background-color: #ff4081;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .music-btn:hover {
+            background-color: #e73370;
+            transform: scale(1.05);
+        }
+
         @keyframes fadeIn {
             from {opacity: 0; transform: translateY(-30px);}
             to {opacity: 1; transform: translateY(0);}
@@ -40,17 +61,40 @@
 </head>
 <body>
 
-    <!-- Musik otomatis -->
-    <audio autoplay loop>
+    <!-- Audio -->
+    <audio id="bgMusic" loop>
         <source src="musik.mp3" type="audio/mpeg">
         Browser kamu tidak mendukung audio.
     </audio>
+
     <div class="card">
         <h1>🎉 Selamat Ulang Tahun 🎂</h1>
         <p>Semoga panjang umur, sehat selalu,</p>
         <p>dan semua impianmu tercapai 💖</p>
         <p>Terima kasih sudah menjadi orang yang spesial ✨</p>
+
+        <!-- Tombol Musik -->
+        <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+            ▶️ Putar Musik
+        </button>
     </div>
+
+    <script>
+        const music = document.getElementById("bgMusic");
+        const btn = document.getElementById("musicBtn");
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (!isPlaying) {
+                music.play();
+                btn.innerHTML = "⏸️ Pause Musik";
+            } else {
+                music.pause();
+                btn.innerHTML = "▶️ Putar Musik";
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
 
 </body>
 </html>
