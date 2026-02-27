@@ -119,5 +119,23 @@
     
     </script>
 
+    <script>
+    window.onload = function() {
+        const notif = document.getElementById("notification");
+        const sound = document.getElementById("notifSound");
+
+        // Munculkan notifikasi
+        setTimeout(() => {
+            notif.classList.add("show");
+            sound.play();
+        }, 1000);
+
+        // Hilangkan setelah 5 detik
+        setTimeout(() => {
+            notif.classList.remove("show");
+        }, 6000);
+    };
+    </script>
+
 </body>
 </html>
