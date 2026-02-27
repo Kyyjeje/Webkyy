@@ -79,14 +79,7 @@
         <p>Aku selalu WELCOME kok</p>
         <p>Web ini aku buat dari jauh-jauh hari 26 Februari </p>
 
-        <!-- SLIDER -->
-<div class="slider" style="width:150px; height:150px;">
-    <div class="slides">
-        <img src="foto1.jpg">
-        <img src="foto2.jpg">
-        <img src="foto3.jpg">
-    </div>
-</div>
+    
 
         <!-- Tombol Musik -->
         <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
@@ -119,20 +112,6 @@
         }
         
     
-    </script>
-
-    <script>
-    const slidesContainer = document.querySelector(".slides");
-    const totalSlides = document.querySelectorAll(".slides img").length;
-    let index = 0;
-
-    setInterval(() => {
-        index++;
-        if (index >= totalSlides) {
-            index = 0;
-        }
-        slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-    }, 3000);
     </script>
 
 </body>
